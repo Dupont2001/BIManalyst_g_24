@@ -51,6 +51,6 @@ for slab in slabs:
         dead_load, surface_load = beregn_surface_load(area, thickness, densitet)
     print(f"Surface load: {surface_load:.2f} N/m²\n")
     
-    result = f"slabs: {len(slabs)}"
+    result = f"Surface load: {surface_load:.2f}"
 
     return result
