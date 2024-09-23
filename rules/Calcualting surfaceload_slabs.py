@@ -1,11 +1,4 @@
-import ifcopenshell
-from bonsai.bim.ifc import IfcStore
-
-# Hent IFC-filen via IfcStore
-file = IfcStore.get_file()
-
-# Hent alle objekter af typen IfcSlab
-slabs = file.by_type('IfcSlab')
+import ifcopenshell  # Import IFCOpenShell
 
 # Konstant for tyngdeacceleration (i meter per sekund kvadrat)
 g = 9.81
@@ -46,23 +39,29 @@ def get_material_density_from_psets(slab):
                 return 2400  # kg/m³ for Concrete 16, kan tilpasses hvis du har en mere præcis metode
     return None
 
-# Beregn og udskriv resultater for slabs
-for slab in slabs:
-    # Hent dimensioner og densitet
-    area, thickness = get_dimensions_from_psets(slab)
-    densitet = get_material_density_from_psets(slab)
+# Funktion til at beregne overfladelast for slabs i modellen
+def checkRule(model):
+    # Hent alle objekter af typen IfcSlab
+    slabs = model.by_type('IfcSlab')
     
-    if area is not None and thickness is not None and densitet is not None:
-        # Beregn overfladelast
-        dead_load, surface_load = beregn_surface_load(area, thickness, densitet)
-        
-        # Udskriv resultaterne
-        print(f"Slab '{slab.GlobalId}':")
-        print(f"Dimensions (Area x Thickness): {area:.2f} x {thickness:.2f} mm")
-        print(f"Dead load (G_k): {dead_load:.2f} N")
-        print(f"Surface load: {surface_load:.2f} N/m²\n")
-    else:
-        print(f"Slab '{slab.GlobalId}' mangler nødvendige dimensioner eller densitet.")
-
-
+    results = []
     
+    for slab in slabs:
+        # Hent dimensioner og densitet
+        area, thickness = get_dimensions_from_psets(slab)
+        densitet = get_material_density_from_psets(slab)
+
+        if area is not None and thickness is not None and densitet is not None:
+            # Beregn overfladelast
+            dead_load, surface_load = beregn_surface_load(area, thickness, densitet)
+
+            # Formatér resultatet
+            result = (f"Slab '{slab.GlobalId}': "
+                      f"Dimensions (Area x Thickness): {area:.2f} m² x {thickness:.2f} mm, "
+                      f"Dead load (G_k): {dead_load:.2f} N, "
+                      f"Surface load: {surface_load:.2f} N/m²")
+            results.append(result)
+        else:
+            results.append(f"Slab '{slab.GlobalId}' mangler nødvendige dimensioner eller densitet.")
+
+    return results
