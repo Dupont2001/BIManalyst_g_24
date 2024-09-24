@@ -14,7 +14,7 @@ def beregn_surface_load(area, thickness, densitet):
 
 # Funktion til at hente dimensioner fra property sets
 def get_dimensions_from_psets(slab):
-    psets = ifcopenshell.util.element.get_psets(slab, psets_only=True)
+    psets = ifcopenshell.util.pset.get_psets(slab)
     
     # Hent dimensioner fra 'Dimensions' property set
     if 'Dimensions' in psets:
@@ -27,7 +27,7 @@ def get_dimensions_from_psets(slab):
 
 # Funktion til at hente densitet fra property sets
 def get_material_density_from_psets(slab):
-    psets = ifcopenshell.util.element.get_psets(slab, psets_only=True)
+    psets = ifcopenshell.util.pset.get_psets(slab)
     
     # Hent densitet fra 'Materials and Finishes' property set
     if 'Materials and Finishes' in psets:
