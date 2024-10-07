@@ -35,4 +35,20 @@
 # The use case 8 gives us the inspiratipn to design our BPMN-diagram. 
 
 # A2d
+# Blue color highlights where a new script is needed
+
+# A2e
+# A Python tool using ifcOpenShell to extract beam properties (length, cross-sectional area, and material density) from IFC models, calculate dead loads, and validate structural safety.
+# Business: Automates load verification, saving time and reducing errors in structural design.
+# Societal: Ensures beam safety, reducing structural failures and improving public safety.
+
+# A2f
+# Extract: Beam length, cross-sectional area, material density.
+# Location in IFC: Found in IfcBeam geometry and IfcPropertySets.
+# Is it in the model?: Yes.
+# How to get it: Use ifcopenshell.util.pset.get_psets() and ifcopenshell.geom.
+# Learning needs: Advanced extraction of geometric data and material profiles.
+
+# A2g
+# Software licences: Blender, BPMN, Github, Markdown & Python
 
