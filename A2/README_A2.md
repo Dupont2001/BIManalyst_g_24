@@ -36,11 +36,13 @@
 
 # A2d
 # Blue color highlights where a new script is needed
+![A2d](IMG/A2d.svg)
 
 # A2e
 # A Python tool using ifcOpenShell to extract beam properties (length, cross-sectional area, and material density) from IFC models, calculate dead loads, and validate structural safety.
 # Business: Automates load verification, saving time and reducing errors in structural design.
 # Societal: Ensures beam safety, reducing structural failures and improving public safety.
+![A2e](IMG/A2e.svg)
 
 # A2f
 # Extract: Beam length, cross-sectional area, material density.
