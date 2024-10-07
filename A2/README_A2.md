@@ -15,8 +15,7 @@
 # It is importent to check if the beams can hold the self weight and load from other properties. and compare it with analytical numbers. 
 
 # A2c: 
-# We would check the claim by reviewing the beam's IfcBeam object in the BIM model. Specifically, we would ensure the necessary properties, such as area, thickness,
-# and material density, are correctly defined in the property sets. We would also validate that the formulas for calculating dead load and line load are accurate 
+# We would check the claim by reviewing the beam's IfcBeam object in the BIM model. Specifically, we would ensure the necessary properties, such as area, thickness, and material density, are correctly defined in the property sets. We would also validate that the formulas for calculating dead load and line load are accurate 
 # and that the beam geometry aligns with the BIM model.
 
 # This claim would typically be checked during the design or planning phase, as the structural integrity (load-bearing capacity) must be verified before construction begins.
