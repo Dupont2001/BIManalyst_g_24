@@ -24,3 +24,13 @@
 # Step 2: Prepare the IFC file: Make sure that you valied IFC-file with beams defined and that the file path in the script match the location of your IFC-file. 
 # Step 3: Run the script in Python: Open Python and execute it. The script will output the surface load for each beam. 
 
+# What Advanced Building Design Stage (A,B,C or D) would your tool be usefuL?
+# Stage C (Technical Design): The tool is most useful during Stage C, where detailed load calculations and structural checks are essential before finalizing designs.
+
+# Which subjects might use it?
+# Structural Engineering: To verify beam loads and structural safety.
+# Architecture: To ensure design compatibility with structural requirements.
+# Construction Management: To confirm design feasibility and material needs.
+
+# What information is required in the model for your tool to work?
+# Beam Geometry: Length and cross-sectional area. Material Properties: Density and type. Property Sets: Beam dimensions and material assignments in IfcPropertySets.
