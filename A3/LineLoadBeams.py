@@ -2,20 +2,26 @@ import ifcopenshell.util.element
 from pathlib import Path
 from bonsai.bim.ifc import IfcStore
 
-g = 9.81  # Gravitational acceleration in m/s²
+g = 9.82  # Gravitational acceleration in m/s²
 
 def checkRule(model):
     beams = []
     
-    # Collect beams with "DR22-250" in their name
+    # Collect beams with specific names
     for beam in model.by_type("IfcBeam"):
         if "DR22-250" in beam.Name:
             beams.append(beam)
+        elif "D22-400" in beam.Name:
+            beams.append(beam)
+        elif "D50-500" in beam.Name:
+            beams.append(beam)
+        elif "DR26-230" in beam.Name:
+            beams.append(beam)
     
     if not beams:
-        return ["No beams with 'DR22-250' found."]
+        return ["No beams with specified names found."]
     
-    print(f"Number of beams found with 'DR22-250': {len(beams)}")
+    print(f"Number of beams found: {len(beams)}")
     
     # Dictionary to group beams with identical properties
     beam_groups = {}
@@ -44,7 +50,7 @@ def checkRule(model):
             structural_material = materials.get('Structural Material')
             
             # Set density based on the structural material
-            if "DR22-250" in beam.Name:
+            if "DR22-250" or "D22-400" or "D50-500" or "DR26-230" in beam.Name:
                 density = 2400  # Density in kg/m³ for DR22-250
             else:
                 density = 7700  # Density in kg/m³ for Steel
@@ -84,7 +90,22 @@ def checkRule(model):
     # Print the grouped results
     for properties, data in beam_groups.items():
         global_ids = ', '.join(data["global_ids"])
+        beam_type = ""
+        
+        # Determine the beam type based on the name
+        for beam_id in data["global_ids"]:
+            beam = model.by_guid(beam_id)
+            if "DR22-250" in beam.Name:
+                beam_type = "DR22-250"
+            elif "D22-400" in beam.Name:
+                beam_type = "D22-400"
+            elif "D50-500" in beam.Name:
+                beam_type = "D50-500"
+            elif "DR26-230" in beam.Name:
+                beam_type = "DR26-230"
+        
         print(f"\nBeams '{global_ids}' have identical properties:")
+        print(f"  - Type: {beam_type}")  # This line prints the beam type
         print(f"  - b (width): {data['b']}")
         print(f"  - h (height): {data['h']}")
         print(f"  - Elevation at Top: {data['elevation_top']}")
