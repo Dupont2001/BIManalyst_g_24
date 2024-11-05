@@ -1,6 +1,5 @@
 import ifcopenshell.util.element
 from pathlib import Path
-from bonsai.bim.ifc import IfcStore
 
 g = 9.82  # Gravitational acceleration in m/s²
 
