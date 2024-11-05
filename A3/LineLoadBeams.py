@@ -59,15 +59,16 @@ def checkRule(model):
             # Convert values to metres
             b_m = b / 1000.0  # Convert mm to m
             h_m = h / 1000.0
+            elevation_top_m = elevation_top / 1000.0
             
             # Calculate the area in square metres
             area_m2 = b_m * h_m  # Area in m²
             
             # Calculate dead load in Newtons
-            line_load_n = area_m2 * density * g  # Dead load in N/m
+            line_load_kn = (area_m2 * density * g) / 1000  # Dead load in kN/m
             
             # Create a unique key for beams with the same properties
-            key = (elevation_top, area_m2, density, line_load_n)
+            key = (elevation_top_m, area_m2, density, line_load_kn)
             
             # Append beam GlobalId to the group of beams with the same key
             if key not in beam_groups:
@@ -75,10 +76,10 @@ def checkRule(model):
                     "global_ids": [],
                     "b": b,
                     "h": h,
-                    "elevation_top": elevation_top,
+                    "elevation_top": elevation_top_m,
                     "area_m2": area_m2,
                     "density": density,
-                    "line_load_n": line_load_n,
+                    "line_load_kn": line_load_kn,
                     "structural_material": structural_material
                 }
             beam_groups[key]["global_ids"].append(beam.GlobalId)
@@ -105,13 +106,13 @@ def checkRule(model):
         
         print(f"\nBeams '{global_ids}' have identical properties:")
         print(f"  - Type: {beam_type}")  # This line prints the beam type
-        print(f"  - b (width): {data['b']}")
-        print(f"  - h (height): {data['h']}")
-        print(f"  - Elevation at Top: {data['elevation_top']}")
+        print(f"  - b (width): {data['b']} mm")
+        print(f"  - h (height): {data['h']} mm")
+        print(f"  - Elevation at Top: {data['elevation_top']} m")
         print(f"  - Structural Material: {data['structural_material']}")
         print(f"  - Calculated Area: {data['area_m2']:.6f} m²")
         print(f"  - Density: {data['density']} kg/m³")
-        print(f"  - Line Load: {data['line_load_n']:.2f} N/m")
+        print(f"  - Line Load: {data['line_load_kn']:.2f} kN/m")
 
 # Load the model
 model_path = Path("C:/Users/psdup/OneDrive - Danmarks Tekniske Universitet/Kandidat/1. Semester/BIM2/CES_BLD_24_06_STR.ifc")
