@@ -1,4 +1,6 @@
-´´´python
+
+
+
 
 import ifcopenshell.util.element
 from pathlib import Path
@@ -8,7 +10,7 @@ g = 9.82  # Gravitational acceleration in m/s²
 def checkRule(model):
     beams = []
     
-    Collect beams with specific names
+    # Collect beams with specific names
     for beam in model.by_type("IfcBeam"):
         if "DR22-250" in beam.Name:
             beams.append(beam)
