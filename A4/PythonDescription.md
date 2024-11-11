@@ -3,8 +3,30 @@ from pathlib import Path
 
 g = 9.82  # Gravitational acceleration in m/s²
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''python
+
+
+
+
+
 def checkRule(model):
+    
     beams = []    
+    
     # Collect beams with specific names
     for beam in model.by_type("IfcBeam"):
         if "DR22-250" in beam.Name:
@@ -112,7 +134,7 @@ def checkRule(model):
         print(f"  - Calculated Area: {data['area_m2']:.6f} m²")
         print(f"  - Density: {data['density']} kg/m³")
         print(f"  - Line Load: {data['line_load_kn']:.2f} kN/m")
-
+'''
 # Load the model
 model_path = Path("C:/Users/psdup/OneDrive - Danmarks Tekniske Universitet/Kandidat/1. Semester/BIM2/CES_BLD_24_06_STR.ifc")
 if not model_path.is_file():
