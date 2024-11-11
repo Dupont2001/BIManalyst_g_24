@@ -118,6 +118,9 @@ def checkRule(model):
         print(f"  - Density: {data['density']} kg/m³")
         print(f"  - Line Load: {data['line_load_kn']:.2f} kN/m")
 
+
+
+
 # Load the model
 model_path = Path("C:/Users/psdup/OneDrive - Danmarks Tekniske Universitet/Kandidat/1. Semester/BIM2/CES_BLD_24_06_STR.ifc")
 if not model_path.is_file():
