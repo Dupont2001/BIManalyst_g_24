@@ -7,13 +7,10 @@ The purpose of this OpenBIM task is to show how BlenderBIM can be used to fill i
 This focus on structural load calculations is relevant for engineers and designers aiming to ensure the safety and efficiency of building structures. Proper load calculations contribute to the structural integrity of a building, ensuring that it can withstand applied forces while remaining energy-efficient. Additionally, accurate load calculations help building owners and stakeholders make informed decisions on materials and design, potentially lowering material costs and enhancing sustainability through optimized structural design.
 
 # Guide:
-This is a guide on how to install Blender and Blender Add-ons. Additionally, we'll demonstrate how to use a script on an IFC file in Blender BIM.
+This is a guide on how to install _**Blender**_ and _**Blender Add-ons**_. Additionally, we'll demonstrate how to use a script on an IFC file in Blender BIM.
 
 1. Download and install Blender:
-
-* First you have to download Blender, which is a free and open-source program for 3D authoring.
-
-* Blender works on Linux, Mac, and Windows. You need to choose your preference.
+First you have to download [Blender](https://www.blender.org/download/), which is a free and open-source program for 3D authoring. Blender works on Linux, Mac, and Windows. You need to choose your preference.
 
 * Once you have downloaded Blender, click on the completed download and open the Blender setup.
 
@@ -33,4 +30,14 @@ This is a guide on how to install Blender and Blender Add-ons. Additionally, we'
 
 * Open Blender, where you will need toperform a quick setup. Click "Next."
 
-* The program is now ready for use. 
+* The program is now ready for use.
+
+2. Download BlenderBIM Add-on:
+Now we need to install BlenderBIM Add-on _**Bonsai**_.
+_**Bonsai**_ is a native building information model authoring platform using IFC based on the IfcOpenShell library.
+After Opening Blender, click on **Edit** > **Prederences**.
+Select the **Get Extensions** tab and press **Allow Online Access** on the left. Then search for _**Bonsai**_ in the top left search bar. Now press the **install** bottom to the right. Now _**Bonsai**_ has been installed and you can see it available in your add-ons list.
+
+3. Import an IFC-file in Blender:
+Now you have to import an IFC-file in Blender. In the upper left corner, you'll find the shortcut 'File.' Select 'Open IFC Project' and choose your preferred model.Your building will now appear.
+
