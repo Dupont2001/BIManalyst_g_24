@@ -1,3 +1,6 @@
+
+The Python script with comments
+
 ```python
 import ifcopenshell.util.element
 from pathlib import Path
