@@ -4,8 +4,7 @@ from pathlib import Path
 g = 9.82  # Gravitational acceleration in m/s²
 
 def checkRule(model):
-    beams = []
-    
+    beams = []    
     # Collect beams with specific names
     for beam in model.by_type("IfcBeam"):
         if "DR22-250" in beam.Name:
