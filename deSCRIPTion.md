@@ -1,4 +1,4 @@
-'''python
+´´´python
 
 import ifcopenshell.util.element
 from pathlib import Path
@@ -127,4 +127,4 @@ if model:
     checkRule(model)
 else:
     print("Failed to load IFC model.")
-'''
+´´´
