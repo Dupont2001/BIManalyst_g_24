@@ -1,4 +1,5 @@
 '''python
+
 import ifcopenshell.util.element
 from pathlib import Path
 
