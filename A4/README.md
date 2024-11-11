@@ -16,8 +16,8 @@ First you have to download [Blender](https://www.blender.org/download/), which i
 Now we need to install BlenderBIM Add-on _**Bonsai**_.
 _**Bonsai**_ is a native building information model authoring platform using IFC based on the IfcOpenShell library.
 After Opening Blender, click on **Edit** > **Prederences**.
-![Edit](
-Select the **Get Extensions** tab and press **Allow Online Access** on the left. Then search for _**Bonsai**_ in the top left search bar. Now press the **install** bottom to the right. Now _**Bonsai**_ has been installed and you can see it available in your add-ons list.
+![Edit](IMG/Edit.png)
+Select the **Get Extensions** tab and press **Allow Online Access** on the left. Then search for _**Bonsai**_ in the top left search bar. Now press the **install** bottom to the right. Now _**Bonsai**_ has been installed and you can see it available in your add-ons list. ![Bonsai](IMG/Bonsai.png)
 
 4. Import an IFC-file in Blender:
 Now you have to import an IFC-file in Blender. In the upper left corner, you'll find the shortcut 'File.' Select 'Open IFC Project' and choose your preferred model.Your building will now appear.
