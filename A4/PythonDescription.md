@@ -1,30 +1,10 @@
+```python
 import ifcopenshell.util.element
 from pathlib import Path
 
 g = 9.82  # Gravitational acceleration in m/s²
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''python
-
-
-
-
-
-def checkRule(model):
-    
+def checkRule(model):    
     beams = []    
     
     # Collect beams with specific names
@@ -146,3 +126,6 @@ if model:
     checkRule(model)
 else:
     print("Failed to load IFC model.")
+```
+
+HEJ
