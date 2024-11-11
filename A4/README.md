@@ -10,27 +10,7 @@ This focus on structural load calculations is relevant for engineers and designe
 This is a guide on how to install _**Blender**_ and _**Blender Add-ons**_. Additionally, we'll demonstrate how to use a script on an IFC file in Blender BIM.
 
 1. Download and install Blender:
-First you have to download [Blender](https://www.blender.org/download/), which is a free and open-source program for 3D authoring. Blender works on Linux, Mac, and Windows. You need to choose your preference.
-
-* Once you have downloaded Blender, click on the completed download and open the Blender setup.
-
-* Click "Next."
-
-* Now you will proceed to the "End-User License Agreement," where you accept the terms
-
-* Click "Next."
-
-* In the new window "Custom Setup," click "Next" again.
-
-* Now you are ready to instal Blender, so click "Install."
-
-* Once the installation is complete, click "Finish."
-
-* Now Blender is installed as a program on your computer.
-
-* Open Blender, where you will need toperform a quick setup. Click "Next."
-
-* The program is now ready for use.
+First you have to download [Blender](https://www.blender.org/download/), which is a free and open-source program for 3D authoring. _**Blender**_ works on Linux, Mac, and Windows. You need to choose your preference. Once you have downloaded _**Blender**_, click on the completed download and open the _**Blender**_ setup. Click "Next". Now you will proceed to the "End-User License Agreement", where you accept the terms. Click "Next". In the new window "Custom Setup", click "Next" again. Now you are ready to instal Blender, so click "Install". Once the installation is complete, click "Finish". Now _**Blender**_ is installed as a program on your computer. Open _**Blender**_, where you will need toperform a quick setup. Click "Next". The program is now ready for use.
 
 2. Download BlenderBIM Add-on:
 Now we need to install BlenderBIM Add-on _**Bonsai**_.
