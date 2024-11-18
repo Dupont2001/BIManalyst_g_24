@@ -139,7 +139,7 @@ Tool Explanation
    ```
    * `Path`: Used to manage the file path to the IFC model
    ```python
-   from pathlib import path
+   from pathlib import Path
    ```
 2. Defining Constants:
    * `g`: The gravitational acceleration is assumed to be 9.82 $\frac{m}{s^2}$
