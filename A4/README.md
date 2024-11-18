@@ -1,3 +1,5 @@
+# [Tutorial Link](https://www.youtube.com/watch?v=ReWDtk9iQa4&ab_channel=MohamadAhmed)
+
 # Introduction: 
 The chosen OpenBIM role is "Analyst Level 3", as a standalone Python programme using IfcOpenshell. The tutorial video explains how to correctly calculate the line load for beams in a building.
 The selected OpenBIM role focuses on the automation of beam load calculations, designed to demonstrate how to work with BlenderBIM scripting for structural analysis. This introductory script showcases how to filter specific beams based on naming conventions, retrieve key properties like dimensions and material density, and calculate the self-weight load for each beam. It further groups beams with identical properties, providing a summary for easy comparison.
