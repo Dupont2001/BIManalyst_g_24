@@ -1,3 +1,7 @@
+### Automated Beam Load Calculation with BlenderBIM
+## Summary:
+This script demonstrates how to automate beam load calculations using BlenderBIM and IfcOpenShell. It filters beams by name, extracts dimensions, and calculates their self-weight based on material density and geometry for structural analysis.
+
 # [Tutorial Link](https://www.youtube.com/watch?v=ReWDtk9iQa4&ab_channel=MohamadAhmed)
 
 # Introduction: 
