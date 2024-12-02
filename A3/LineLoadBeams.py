@@ -19,9 +19,7 @@ def checkRule(model):
     
     if not beams:
         return ["No beams with specified names found."]
-    
-    print(f"Number of beams found: {len(beams)}")
-    
+        
     # Dictionary to group beams with identical properties
     beam_groups = {}
     
@@ -43,16 +41,12 @@ def checkRule(model):
             h = dims.get('h')
             elevation_top = dims.get('Elevation at Top')
             
-        # Attempt to get density from 'Materials and Finishes' property set
-        if 'Materials and Finishes' in psets:
-            materials = psets['Materials and Finishes']
-            structural_material = materials.get('Structural Material')
             
-            # Set density based on the structural material
-            if "DR22-250" or "D22-400" or "D50-500" or "DR26-230" in beam.Name:
-                density = 2400  # Density in kg/m³ for DR22-250
-            else:
-                density = 7700  # Density in kg/m³ for Steel
+        # Set density based on the structural material
+        if "DR22-250" or "D22-400" or "D50-500" or "DR26-230" in beam.Name:
+            density = 2400  # Density in kg/m³ for DR22-250
+        else:
+            density = 7700  # Density in kg/m³ for Steel
                 
         # Check if all necessary values are available
         if b is not None and h is not None and density is not None and elevation_top is not None:
@@ -79,8 +73,7 @@ def checkRule(model):
                     "elevation_top": elevation_top_m,
                     "area_m2": area_m2,
                     "density": density,
-                    "line_load_kn": line_load_kn,
-                    "structural_material": structural_material
+                    "line_load_kn": line_load_kn
                 }
             beam_groups[key]["global_ids"].append(beam.GlobalId)
         
@@ -109,7 +102,6 @@ def checkRule(model):
         print(f"  - b (width): {data['b']} mm")
         print(f"  - h (height): {data['h']} mm")
         print(f"  - Elevation at Top: {data['elevation_top']} m")
-        print(f"  - Structural Material: {data['structural_material']}")
         print(f"  - Calculated Area: {data['area_m2']:.6f} m²")
         print(f"  - Density: {data['density']} kg/m³")
         print(f"  - Line Load: {data['line_load_kn']:.2f} kN/m")
